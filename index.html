@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SharePoint Popup</title>
+  <style>
+    #popup {
+      display: none;
+      position: fixed;
+      top: 20%;
+      left: 30%;
+      width: 40%;
+      padding: 20px;
+      background: #fff;
+      border: 2px solid #444;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      z-index: 1000;
+      font-family: Arial, sans-serif;
+    }
+    #popup button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="popup">
+    <h3>Welcome!</h3>
+    <p>This is your custom SharePoint popup message.</p>
+    <button onclick="document.getElementById('popup').style.display='none'">Close</button>
+  </div>
+
+  <script>
+    window.onload = function() {
+      setTimeout(function() {
+        document.getElementById('popup').style.display = 'block';
+      }, 2000); // Show after 2 seconds
+    };
+  </script>
+</body>
+</html>
