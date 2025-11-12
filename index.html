@@ -3,6 +3,13 @@
 <head>
   <title>SharePoint Popup</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
     #popup {
       display: none;
       position: fixed;
@@ -10,21 +17,37 @@
       left: 30%;
       width: 40%;
       padding: 20px;
-      background: #fff;
+      background: #ffffff;
       border: 2px solid #444;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
       z-index: 1000;
-      font-family: Arial, sans-serif;
+      text-align: center;
     }
+
+    #popup h3 {
+      margin-top: 0;
+    }
+
     #popup button {
-      margin-top: 10px;
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    #popup button:hover {
+      background-color: #005a9e;
     }
   </style>
 </head>
 <body>
+
   <div id="popup">
-    <h3>Welcome!</h3>
-    <p>This is your custom SharePoint popup message.</p>
+    <h3>Welcome to Our SharePoint Site!</h3>
+    <p>This is a custom popup message embedded from GitHub Pages.</p>
     <button onclick="document.getElementById('popup').style.display='none'">Close</button>
   </div>
 
@@ -32,8 +55,9 @@
     window.onload = function() {
       setTimeout(function() {
         document.getElementById('popup').style.display = 'block';
-      }, 2000); // Show after 2 seconds
+      }, 2000); // Show popup after 2 seconds
     };
   </script>
+
 </body>
 </html>
