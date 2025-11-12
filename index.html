@@ -3,13 +3,6 @@
 <head>
   <title>SharePoint Popup</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-
     #popup {
       display: none;
       position: fixed;
@@ -17,37 +10,21 @@
       left: 30%;
       width: 40%;
       padding: 20px;
-      background: #ffffff;
+      background: #fff;
       border: 2px solid #444;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
       z-index: 1000;
-      text-align: center;
+      font-family: Arial, sans-serif;
     }
-
-    #popup h3 {
-      margin-top: 0;
-    }
-
     #popup button {
-      margin-top: 15px;
-      padding: 8px 16px;
-      background-color: #0078d4;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    #popup button:hover {
-      background-color: #005a9e;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-
   <div id="popup">
-    <h3>Welcome to the Training Hub!</h3>
-    <p style="background-color: yellow; font-weight: bold; padding: 10px; border-radius: 5px;>YOU MUST USE THE MICROSOFT EDGE BROWSER TO RECEIVE CREDIT FOR TRAINING.😊</p>
+    <h3>Welcome!</h3>
+    <p>You must use the MICROSOFT EDGE BROWSER to access the quizzes & receive credit for completing training.</p>
     <button onclick="document.getElementById('popup').style.display='none'">Close</button>
   </div>
 
@@ -55,9 +32,8 @@
     window.onload = function() {
       setTimeout(function() {
         document.getElementById('popup').style.display = 'block';
-      }, 2000); // Show popup after 2 seconds
+      }, 2000); // Show after 2 seconds
     };
   </script>
-
 </body>
 </html>
